@@ -1,0 +1,2 @@
+PASCAL VOC dataset description:
+http://host.robots.ox.ac.uk/pascal/VOC/
