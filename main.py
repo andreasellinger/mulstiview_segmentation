@@ -43,13 +43,14 @@ def decode_segmap(image, nc=21):
 from os import listdir
 from os.path import isfile, join
 
-basepath = './Data/table/'
+# %%
+basepath = './Data/different_pointcloud_objects/'
 
 onlyfiles = [f for f in listdir(basepath) if isfile(join(basepath, f))]
 
-# %%
+# %
 print(onlyfiles)
-# %%
+# %
 
 for img in onlyfiles:
     #%%
@@ -65,6 +66,8 @@ for img in onlyfiles:
                     T.Normalize(mean = [0.485, 0.456, 0.406], 
                                 std = [0.229, 0.224, 0.225])])
     inp = trf(img).unsqueeze(0)
+
+
 
     #%%
     # Pass the input through the net
